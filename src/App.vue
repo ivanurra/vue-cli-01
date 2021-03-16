@@ -2,7 +2,9 @@
     <section>
         <h2>My Friends</h2>
             <ul>
-                <li></li>
+                <li>
+                    <friend-contact></friend-contact>
+                </li>
             </ul>
     </section>
 </template>
@@ -11,7 +13,7 @@
 export default {
     data() {
         return {
-            friends: [
+                friends: [
                 {
                     id: 'maria',
                     name: 'Maria Colina',
