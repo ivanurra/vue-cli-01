@@ -3,8 +3,16 @@
         <header><h1>My Friends</h1></header>
             <ul>
                 <li>
-                    <friend-contact></friend-contact>
-                    <friend-contact></friend-contact>
+                    <friend-contact
+                    name="Marco Aurelio"
+                    phone-number="555 555 555"
+                    email-address="marco.aurelio@thestoics.com"
+                    ></friend-contact>
+                    <friend-contact
+                    name="Epicteto"
+                    phone-number="111 111 111"
+                    email-address="epitecto@thestoics.com"
+                    ></friend-contact>
                 </li>
             </ul>
     </section>
