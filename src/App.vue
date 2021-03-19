@@ -7,7 +7,6 @@
                     name="Marco Aurelio"
                     phone-number="555 555 555"
                     email-address="marco.aurelio@thestoics.com"
-                    is-favorite="1"
                   ></friend-contact>
                   <friend-contact
                     name="Epicteto"
