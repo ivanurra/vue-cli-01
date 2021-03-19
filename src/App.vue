@@ -4,15 +4,12 @@
             <ul>
               <li>
                 <friend-contact
-                    name="Marco Aurelio"
-                    phone-number="555 555 555"
-                    email-address="marco.aurelio@thestoics.com"
-                  ></friend-contact>
-                  <friend-contact
-                    name="Epicteto"
-                    phone-number="111 111 111"
-                    email-address="epitecto@thestoics.com"
-                    is-favorite="0"
+                    v-for="friend in friends"
+                    :key="friend.id"
+                    :name="friend.name"
+                    :phone-number="friend.phone"
+                    :email-address="friend.email"
+                    :is-favorite="true"
                   ></friend-contact>
                 </li>
             </ul>
