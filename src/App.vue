@@ -1,6 +1,7 @@
 <template>
     <section>
         <header><h1>My Friends</h1></header>
+        <new-friend @add-contact="addContact"></new-friend>
             <ul>
               <li>
                 <friend-contact
@@ -19,7 +20,9 @@
 </template>
 
 <script>
+import NewFriend from './components/NewFriend.vue';
 export default {
+  components: { NewFriend },
     data() {
         return {
                 friends: [
@@ -44,6 +47,16 @@ export default {
       toggleFavoriteStatus(friendId) {
         const identifiedFriend = this.friends.find(friend => friend.id === friendId);
         identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
+      },
+      addContact (name, phone, email) {
+        const newFriendContact = {
+          id: new Date().toISOString(),
+          name: name,
+          phone: phone,
+          email: email,
+          isFavorite: false
+        };
+        this.friends.push(newFriendContact);
       }
     }
     // computed: {}
@@ -81,7 +94,8 @@ header {
   list-style: none;
 }
 
-#app li {
+#app li,
+#app form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 1rem auto;
   border-radius: 10px;
