@@ -39,11 +39,22 @@ export default {
             }
         }
     },
-    data() {
-        return {
-            detailsAreVisible: false
-        };
-    },
+    emits: ['toggle-favorite'],
+    // emits: {
+    //     'toggle-favorite': function(id) {
+    //         if (id) {
+    //             return true;
+    //         } else {
+    //             console.warn('id is missing!');
+    //             return false;
+    //         }
+    //     }
+    // },
+    // data() {
+    //     return {
+    //         detailsAreVisible: false
+    //     };
+    // },
     methods: {
         toggleDetails() {
             this.detailsAreVisible = !this.detailsAreVisible;
